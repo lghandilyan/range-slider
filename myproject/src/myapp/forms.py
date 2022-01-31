@@ -16,5 +16,5 @@ class PeopleFilterFormHelper(forms.Form):
             else:
                 layout_field = Field(field_name)
             layout_fields.append(layout_field)
-        layout_fields.append(StrictButton("Submit", name='submit', type='submit', css_class='btn btn-fill-out btn-block mt-1'))
+        layout_fields.append(StrictButton("Submit", name='submit', type='submit', id='id_age_button', css_class='btn btn-fill-out btn-block mt-1 no-display'))
         self.helper.layout = Layout(*layout_fields)

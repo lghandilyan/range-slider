@@ -8,10 +8,14 @@ $( function() {
         $("#" + $(this).parent().attr("id") + "_max").val(ui.values[ 1 ]);
         $("#" + $(this).parent().attr("id") + "_text").text(ui.values[ 0 ] + ' - ' + ui.values[ 1 ]);
       },
+      stop: function( event, ui ) {
+        $("#" + $(this).parent().attr("id") + "_button").click();
+      },
       create: function( event, ui ) {
         $(this).slider("option",'min',$(this).parent().data("range_min"));
         $(this).slider("option",'max',$(this).parent().data("range_max"));
         $(this).slider("option",'values',[$(this).parent().data("cur_min"), $(this).parent().data("cur_max")]);
+        $("#" + $(this).parent().attr("id") + "_button").hide();
       }
     });
     $("#" + $(".numeric-slider").attr("id") + "_min").val( $(".numeric-slider").data("cur_min") );

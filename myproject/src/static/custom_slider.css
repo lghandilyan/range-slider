@@ -24,3 +24,7 @@
 .numeric-slider-range-text {
   text-align: center;
 }
+
+.no-display {
+  display: none;
+}
